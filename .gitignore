@@ -1,0 +1,21 @@
+# Виртуальное окружение
+.venv/
+env/
+venv/
+
+# PyCharm
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Временные и генерируемые файлы
+*.pdf
+*.html
+state.json
+current_number.txt
+!template.html
+!template_1.html
