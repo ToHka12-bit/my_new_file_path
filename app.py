@@ -2,15 +2,15 @@ from flask import Flask
 
 app = Flask(__name__)#Создаём сайт
 
-@app.route("/")#если кто-то попросит адрес, то выполница нижняя функция
+@app.route("/")#если кто-то попросит адрес, то выполнится нижняя функция
 def hello():
-    print("Кто-то зашел на сайт!")
-    return "Привет! Я учусь программировать на Python!"
+
+    return "<h1>Привет! Я учусь программировать на Python!</><a href='/about'> Перейти на страницу о нас</a>"
 
 
 @app.route("/about")
 def about():
-    return "Эта  страница о бо мне "
+    return "<h1>Обо мне</h1><p>Тут я расскажу, что я изучаю Python!</p><a href='/about'> Вернуться на главную</a> "
 
 if __name__ == "__main__":
     app.run(debug=True)
