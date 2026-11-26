@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template# импорт библиотеки
 
 app = Flask(__name__)#Создаём сайт
 
 @app.route("/")#если кто-то попросит адрес, то выполнится нижняя функция
 def hello():
     print("Кто-то зашел на главную страницу!")
-    return "<h1>Привет! Я учусь программировать на Python!</h1><a href='/about'> Перейти на страницу о нас</a>"
+    return render_template("index.html")
 
 
 @app.route("/about")
